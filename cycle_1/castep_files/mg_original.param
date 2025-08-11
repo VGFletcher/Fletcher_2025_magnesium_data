@@ -1,0 +1,14 @@
+task : SinglePoint
+continuation : default
+calculate_stress : true
+opt_strategy : speed
+
+xc_functional : PBE
+cut_off_energy : 700 eV
+elec_energy_tol : 1.0e-9
+fine_grid_scale : 4.0
+
+max_scf_cycles : 150
+write_checkpoint : none
+backup_interval : 3420
+data_distribution : Gvector
