@@ -1,0 +1,67 @@
+#max volume of atoms, max volume per atom of random configurations built, 100-500 is safe usually
+max_volume_per_atom=200
+
+#Bond length cutoff, VGF modified version only
+min_nn_dis=0.0
+
+#= 'atomic number' 'number of atoms' 16-32 for quick results, more atoms for more complex 
+start_species= 12 64
+
+#total number of walkers depends on number of atoms, 16 atoms 500 walkers is suitable, more atoms needs more walkers due to more minima you need to find, 3 runs to verify, 50% increase each time, must be multiple of number of cores 480, 720, 960, 1200, 1440, 1680, 1920, 2160, 2400, 2640
+n_walkers=384
+
+#number of walkers to kill at each NS iteration, 
+n_cull=1
+
+#pressure of the run units of potential, ev/a3 (1pa = 6.242e-12 eV/A3 )
+MC_cell_P=0.87388
+
+#temperature down to which Z(T) should be converged, depends on interest about system, still going to be disorder, depends on what physical insight you need 
+converge_down_to_T=200.00
+
+#n_model_calls_expected/[number of processors] > 20 500 minimum, this is the number of dynamics steps
+n_model_calls_expected=336
+
+#atom algorithm = monte carlo (MC), molecular dynamics (MD) use MC if using fortran potential
+atom_algorithm=MD
+
+#energy calculator = ASE, lammps, internal, fortran
+energy_calculator=ASE_JUL
+
+ACE_json_path=./o4_d14.json
+ACE_env_path=/home/chem/msuvsb/software/ACE_envs/
+
+ACE_committee=False
+#min_std0.0625
+save_high_std=False
+
+#How many iterations before it prints a configuration 50-100 for heat capacities not too important
+traj_interval=10
+
+#snapshot interval how many interations it will save to restart the calculation from if it fails 1000-10000
+snapshot_interval=5000
+
+#realtive number of these operations performed in the dynamics to decorrelate , higher temp and pressure could be useful to do more volume but doesnt really matter
+n_atom_steps=266
+atom_traj_len=5
+n_cell_volume_steps=384
+n_cell_shear_steps=299
+n_cell_stretch_steps=299
+
+#preventing cells becoming stretched 0.8/0.9
+MC_cell_min_aspect_ratio=0.65
+
+out_file_prefix=mg16_34-50GPa
+
+KEmax_max_T=14487
+calc_nn_dis=False
+
+committee_std_stopping_criteria=False
+#committee_std_barrier0.060625
+#committee_std_frac0.9
+
+make_output_dir=True
+#34, 38, 42, 46, 50
+RE_pressures=0.212228 0.237196 0.262164 0.287132 0.3121
+RE_n_swap_cycles=100
+RE_swap_interval=50
