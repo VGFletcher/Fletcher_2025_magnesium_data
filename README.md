@@ -1,7 +1,8 @@
 # Data Related to publication: <br> Optimal Autonomous MLIP Dataset Building
 ### UK Ministry of Defence © Crown Owned Copyright 2025/AWE
 
-This repository contains all the data produced for the publication titled "Optimal Autonomous MLIP Dataset Building" (DOI when available)  
+This repository contains all the data produced for the publication titled "Optimal Autonomous MLIP Dataset Building"  
+(https://doi.org/10.48550/arXiv.2508.08864)  
 Contact: vincent.fletcher@warwick.ac.uk
 
 The primary contents are:
