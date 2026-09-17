@@ -2,8 +2,10 @@
 ### UK Ministry of Defence © Crown Owned Copyright 2025/AWE
 
 This repository contains all the data produced for the publication titled "Autonomous thermodynamically informed database generation for machine-learned interatomic potentials and application to magnesium"
-(https://doi.org/10.48550/arXiv.2508.08864)  
+(https://doi.org/10.1038/s41524-025-01903-z)  
 Contact: vincent.fletcher@warwick.ac.uk
+
+This data is also uploaded on Zenodo (https://doi.org/10.5281/zenodo.22812395)
 
 The primary contents are:
 1. The nested sampling runs done at each cycle, with the interatomic potential used during that cycle
@@ -13,7 +15,7 @@ The primary contents are:
     
 In addition to this data I have also provided the DFT benchmark data shown in the paper.
 
-If you would like to use our data for training, the `.edb.extxyz` files contain the nested sampling configurations and the DFT evaluated properties under the keywords: `dft_energy` (eV), `dft_virial` (eV/ $Å^3$), `dft_forces` (eV/ $Å$). The stresses are also saved under the keyword `dft_stress` (GPa) but the units are GPa.
+If you would like to use our data for training, the `.edb.extxyz` files contain the nested sampling configurations and the DFT evaluated properties under the keywords: `dft_energy` (eV), `dft_virial` (eV/ $Å^3$), `dft_forces` (eV/ $Å$). The stresses are also saved under the keyword `dft_stress` (GPa) but the units are GPa. A collection of all the `.edb.extxyz` files is also provided (`mg_all.edb.extxyz`).
 
 Note: Due to the quantity of nested sampling data collected only a small portion of the configurations are provided in the `.traj.extxyz` files but the full files can be requested from the author.
 
